@@ -608,7 +608,7 @@ wait_console_window (void)
 {
   FILE *console = fopen ("CONOUT$", "w");
 
-  SetConsoleTitleW (g_utf8_to_utf16 (_("GIMP output. Type any character to close this window."), -1, NULL, NULL, NULL));
+  SetConsoleTitleW (g_utf8_to_utf16 (_("\nGIMP output. Type any character to close this window.\n"), -1, NULL, NULL, NULL));
   fprintf (console, _("(Type any character to close this window)\n"));
   fflush (console);
   _getch ();
